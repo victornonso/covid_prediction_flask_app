@@ -5,7 +5,7 @@ An interactive Flask‑based web service that predicts the likelihood of a user 
 
 ## 🚀 Features
 
-* **Accurate Predictions**: Gradient Boostingl tuned via cross‑validation
+* **Accurate Predictions**: Uses Gradient Boosting tuned via cross‑validation
 * **Interactive Web Interface**: Simple HTML form to input age, sex, and symptoms.
 * **RESTful API**: `/predict` endpoint for integrating predictions into other applications.
 
@@ -113,4 +113,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## 📬 Contact
 
 Made with ❤️ by eHealth Africa Team.
-For questions or suggestions, please reach out at [email@example.com](mailto:victornonso44@gmail.com).
+For questions or suggestions, please reach out at (mailto:victornonso44@gmail.com).
