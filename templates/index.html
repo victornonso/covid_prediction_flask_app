@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>COVID Prediction App</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; }
+    .field { margin-bottom: 1rem; }
+    label { display: block; margin-bottom: .25rem; }
+    .checkbox-group label { display: inline-block; margin-right: 1rem; }
+    button { padding: .5rem 1.5rem; font-size: 1rem; }
+    .result { margin-top: 2rem; font-size: 1.2rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>COVID‑19 Risk Prediction Model</h1>
+
+  <form method="post">
+    {% for feat in feature_names %}
+      {% if feat == 'Sex' %}
+        <div class="field">
+          <label>Sex:</label>
+          <label><input type="radio" name="Sex" value="male" checked> Male</label>
+          <label><input type="radio" name="Sex" value="female"> Female</label>
+        </div>
+
+      {% elif feat == 'Age' %}
+        <div class="field">
+          <label>Birth Year:</label>
+          <input type="number" name="Birth_Year" value="1980" min="1900" max="2025" required>
+        </div>
+
+      {% else %}
+        <div class="field checkbox-group">
+          <label>{{ feat }}:</label>
+          <label><input type="radio" name="{{ feat }}" value="yes"> Yes</label>
+          <label><input type="radio" name="{{ feat }}" value="no" checked> No</label>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    <button type="submit">Predict</button>
+  </form>
+
+  {% if prediction %}
+    <div class="result">
+      Prediction: {{ prediction }}<br>
+      Probability: {{ probability }}
+    </div>
+  {% endif %}
+</body>
+</html>
