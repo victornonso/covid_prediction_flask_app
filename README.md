@@ -112,5 +112,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 📬 Contact
 
-Made with ❤️ by eHealth Africa Team.
+Made with ❤️ by victornonso.
 For questions or suggestions, please reach out at (mailto:victornonso44@gmail.com).
